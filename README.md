@@ -10,24 +10,46 @@ Obtaining the script
 Entering the directory
   
     $ cd device_status.sh
-  
-Making the script executable
-  
-    $ chmod +x device_status.sh
- 
-Running the script (parameter1 = device IP address or hostname; parameter2 = device name)
- 
-    $ ./device_status parameter1 parameter2
     
-Running the script in the background
+Linux:
 
-    $ ./device_status parameter1 parameter2 &
+  Making the script executable
+  
+    $ chmod +x linux_device_status.sh
+ 
+  Running the script (parameter1 = device IP address or hostname; parameter2 = device name: parameter3 = delay in seconds)
+ 
+    $ ./linux_device_status parameter1 parameter2 parameter3
+    
+  Running the script in the background
+
+    $ ./linux_device_status parameter1 parameter2 parameter3 &
+    
+MacOS:
+
+  Making the script executable
+  
+    $ chmod +x macos_device_status.sh
+ 
+  Running the script (parameter1 = device IP address or hostname; parameter2 = device name: parameter3 = delay in seconds)
+ 
+    $ ./macos_device_status parameter1 parameter2 parameter3
+    
+  Running the script in the background
+
+    $ ./macos_device_status parameter1 parameter2 parameter3 &
+
     
 Additional info:
 
-Log file will be located at /home/username/device_status.log
+Log file will be located at /home/username/device_status.log on Linux or /Users/username/Desktop/device_status.log on MacOS
 
-Ping loops every 15 minutes if device is up. In case that device is down, it loop every minute (+/- depending on the delay from ping)
+27th Nov: User can now pass the delay (parameter3) in seconds on how often the target device is pinged in order to check on its status
+
+  Example. Command below will run the script in the background and ping the printer with the IP address 192.168.0.100 every 15 minutes (900 seconds)
+ 
+    $ ./macos_device_status 192.168.0.100 Printer 900 &
+    
 
 
   
