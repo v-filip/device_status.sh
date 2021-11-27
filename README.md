@@ -11,7 +11,9 @@ Entering the directory
   
     $ cd device_status.sh
     
-Linux:
+I--------I
+I Linux: I
+I--------I
 
   Making the script executable
   
@@ -24,8 +26,10 @@ Linux:
   Running the script in the background
 
     $ ./linux_device_status parameter1 parameter2 parameter3 &
-    
-MacOS:
+
+I--------I
+I MacOS: I
+I--------I
 
   Making the script executable
   
