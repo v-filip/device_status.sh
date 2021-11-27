@@ -19,6 +19,10 @@ Running the script (parameter1 = device IP address or hostname; parameter2 = dev
  
     $ ./device_status parameter1 parameter2
     
+Running the script in the background
+
+    $ ./device_status parameter1 parameter2 &
+    
 Additional info:
 
 Log file will be located at /home/username/device_status.log
